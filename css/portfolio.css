@@ -1,0 +1,100 @@
+.portfolio {
+    min-height: 100vh;
+    padding: 4rem 6rem;
+}
+
+.portfolio .item:hover .portfolio .item .info {
+    display: none;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+}
+
+.heading h2 {
+    text-align: center;
+    padding-bottom: .5rem;
+    margin-bottom: 3rem;
+    border-bottom: 3px solid #1C65FF;
+    display: inline-block;
+}
+
+.portfolio .item .work-media {
+    height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all .3s ease-in-out;
+}
+
+.portfolio .item .work-media a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio .item .work-media:hover {
+    filter: brightness(50%);
+    /* background-size: 120%; */
+}
+
+.portfolio .item {
+    margin: 0 .5rem;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 21px #e0e0e0;
+}
+
+@media all and (max-width: 992px) {
+
+    .portfolio .item{
+        margin-bottom: 3rem;
+    }
+    
+}
+
+@media all and (max-width: 760px) {
+
+    .portfolio {
+        padding: 4rem 3rem;
+    }
+
+}
+
+.portfolio .item .info {
+}
+
+.portfolio .item .info a {
+    display: block;
+    color: #353535;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem 1rem;
+    transition: all .3s ease-in;
+}
+
+.portfolio .item .info a:hover {
+    background-color: white;
+}
+
+.portfolio .item .info .work {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+
+.portfolio .item .info p {
+    margin-bottom: 0;
+}
+
+.portfolio .item .info .tag {
+    color: #1C65FF;
+}
+
+.portfolio .item .info .work-date {
+    font-size: .8rem;
+    color: grey;
+}

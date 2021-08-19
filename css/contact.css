@@ -1,0 +1,147 @@
+.contact{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #1C65FF;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.contact * {
+    box-sizing: border-box;
+}
+
+.contact .socials {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact .socials a{
+    margin-right: 1.5rem;
+    color: white;
+}
+
+.contact .socials .contact-link{
+    width: 22px;
+    height: 22px;
+}
+
+.contact-form {
+    width: 73vw;
+    background: white;
+    -moz-box-shadow: 0 0 20px #bdbdbd;
+    -webkit-box-shadow: 0 0 20px #bdbdbd;
+    box-shadow: 0 0 20px #bdbdbd;
+    border-radius: 5px;
+    padding: 2rem;
+    margin: 0 auto;
+    z-index: 50;
+}
+
+.contact-form-header {
+    display: flex;
+    align-items: center;
+    color: #5c5c5c;
+}
+
+.contact-form-header span {
+    margin-left: 1rem;
+}
+
+.our-info-wrapper {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.our-info-wrapper > * {
+    width: 100%;
+}
+
+.form-component {
+    margin-right: 1rem;
+}
+
+.contact-input {
+    padding: .8rem;
+    background-color: #f0f0f0;
+    border: none;
+    outline: none;
+    width: 100%;
+    border-radius: 2px;
+    margin-bottom: 1rem;
+    font-size: .8rem;
+} 
+
+.contact-button {
+    padding: .8rem;
+    display: block;
+    background-color: #1C65FF;
+    color: white;
+    width: 100%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    margin-top: 1rem;
+    border: 1px solid transparent;
+    transition: all .3s ease-out;
+}
+
+.contact-button:hover {
+    color: #1C65FF;
+    background-color: white;
+    border: 1px solid #1C65FF;
+}
+
+.contact-button span {
+    margin-right: .5rem;
+}
+
+.our-info {
+    border-left: 2px solid #f0f0f0;
+    padding: 5rem 0 7rem 1rem;
+    margin-left: 2rem;
+}
+
+.our-info p {
+    display: flex;
+    align-items: center;
+}
+
+.our-info .info-icon {
+    color: #1C65FF;
+}
+
+.our-info p{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    font-size: .85rem;
+    font-weight: 500;
+}
+
+.our-info p:last-of-type {
+    margin-bottom: 0;
+}
+
+.our-info p > span {
+    margin-left: .7rem;
+}
+
+@media all and (max-width: 760px) {
+    .contact {
+        padding: 4rem 0;
+    }
+    .our-info-wrapper {
+        display: block;
+    }
+    .our-info {
+        border: none;
+        padding: 0;
+        margin: 3rem 0 0 0;
+    }
+}

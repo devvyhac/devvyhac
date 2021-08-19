@@ -1,0 +1,147 @@
+html, body, *, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 1px;
+}
+
+.container-fluid, .container, .row {
+    margin: 0;
+    padding: 0;
+}
+
+.about{
+    background: #52baca;
+    color: white;
+    height: calc(100vh - 56px);
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+
+}
+
+.about p {
+    padding: 1rem 2rem 0 0;
+}
+
+.media {
+    background-image: url(../assets/larry2.jpg);
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+}
+
+.exps {
+    padding: 2rem;
+    height: 100vh;
+    background-color: #fafafa;
+}
+
+.exps .heading {
+    color: #797979;
+}
+
+.exp {
+    margin-bottom: 2.5rem;
+}
+
+
+
+.company {
+    font-weight: bold;
+    color: #797979;
+}
+
+.company .role {
+    font-size: .8rem;
+    opacity: .7;
+    font-weight: lighter;
+}
+
+.description {
+    margin-top: 1rem;
+}
+
+.date {
+    font-size: .7rem;
+    color: red;
+}
+
+.contact-me {
+    height: 100vh;
+    width: 100%;
+    background-color: #1859E6;
+}
+
+@media all and (max-width: 760px) {
+    .about {
+        min-height: calc(100vh - 56px);
+        height: auto;
+    }
+
+    .about .media {
+        height: 300px;
+        margin-top: 2rem;
+    }
+
+    .exps {
+        min-height: calc(100vh - 56px);
+        height: auto;
+    }
+}
+
+.sponsors {
+    padding: 3rem 4rem;
+}
+
+.sponsors .heading {
+    margin-bottom: 3rem;
+}
+
+.sponsor {
+    display: flex;
+    align-items: center;
+}
+
+.sponsor p {
+    margin-left: 1rem;
+    font-weight: bold;
+}
+
+
+.org img {
+    width: 30%;
+}
+
+
+.footer {
+    width: 100%;
+    background-color: #434343;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 3rem 2rem;
+}
+
+.footer span{
+    display: block;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    font-size: .8rem;
+    margin-right: .5rem;
+    opacity: .5;
+    transition: all .3s ease-out;
+}
+
+.footer a:last-of-type {
+    margin-right: 0;
+}
+
+.footer a:hover {
+    color: red;
+    opacity: 1;
+}
