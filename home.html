@@ -11,59 +11,280 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/skills.css">
 </head>
 <body>
-
-    <div class="wrapper">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light px-4" style="background-color: #e3f2fd;">
-            <div class="container-fluid">
-              <a class="navbar-brand ml-2" href="/">Devvyhac</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#about">About</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#exps">Experiences</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#portfolio">Portfolio</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#contact-me">Contact Me</a>
-                  </li>
-                </ul>
-              </div>
+    <div class="nav-2" id="nav-2">
+        <div class="sidebar">
+            <div class="logo">Devvyhac</div>
+            <ul class="links-2" id="links-2">
+                <li class="nav-2-link">
+                    <a href="#about">About Me</a>
+                </li>
+                <li class="nav-2-link">
+                    <a href="#skills">Skills</a>
+                </li>
+                <li class="nav-2-link">
+                    <a href="#exps">Experiences</a>
+                </li>
+                <li class="nav-2-link">
+                    <a href="#portfolio">Works</a>
+                </li>
+                <li class="nav-2-link">
+                    <a href="#contact-me">Contact Me</a>
+                </li>
+            </ul>
+            <div class="closer" id="closer">
+                <i class="fas fa-times"></i>
             </div>
-        </nav>
-        <div class="container-fluid m-0 p-0">
-            <div class="about row m-0" id="about">
-                <div class="typo col-xs-12 col-sm-6 col-md-6 col-lg-6 m-0 p-0">
-                    <h2>Abdulqudus Ismail</h2>
-                    <h5>Backend Developer - NodeJS</h5>
-                    <p>
-                    I am a server-side web developer, using NodeJS and PHP together with 
-                    other technologies like; MongoDB and MySQL. I also have knowledge in 
-                    client-side wep development and over the years, I have created a couple 
-                    of websites where I did both the server-side and client-side implementation.
-                    </p>
-                    <div class="actions pt-2">
-                        <button class="btn btn-light">My Portfolio</button>
-                        <button class="btn btn-primary">Contact Me</button>
+        </div>
+    </div>
+    <div class="wrapper" id="wrapper">
+        <div class="navigation">
+            <div class="logo">Devvyhac</div>
+            <ul class="links">
+                <li class="link">
+                    <a href="#about">About Me</a>
+                </li>
+                <li class="link">
+                    <a href="#skills">Skills</a>
+                </li>
+                <li class="link">
+                    <a href="#exps">Experiences</a>
+                </li>
+                <li class="link">
+                    <a href="#portfolio">Works</a>
+                </li>
+                <li class="link">
+                    <a href="#contact-me">Contact Me</a>
+                </li>
+            </ul>
+            <div class="toggler" id="reveal">
+                <i class="fas fa-stream"></i>
+            </div>
+        </div>
+        <div class="page-section about container-fluid m-0" id="about">
+            <div class="about-card">
+                <div class="about-desc">
+                    <div class="avatar"></div>
+                    <div class="about-info">
+                        <p class="name">Abdulqudus Ismail</p>
+                        <span class="intro">
+                            Hi, I'm Abdulqudus Ismail and I am a Fullstack Web 
+                            Developer and Mobile Phone Engineer
+                        </span>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 media">
+                <a href="#contact-me" class="about-action">
+                    Contact Me <i class="fa fa-chevron-up"></i>
+                </a>
+            </div>
+            <ul class="about-socials">
+                <li>
+                    <a href="https://gmail.com" class="social-item red">
+                        <div class="thumbnail">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="platform">
+                            <span class="platform-name">Gmail</span>
+                            <span class="account-name">realdevvyhac@gmail.com</span>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-chevron-right"></i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://facebook.com" class="social-item blue">
+                        <div class="thumbnail">
+                            <i class="fab fa-facebook-f"></i>
+                        </div>
+                        <div class="platform">
+                            <span class="platform-name">Facebook</span>
+                            <span class="account-name">Olanrewaju Alashe</span>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-chevron-right"></i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/devvyhac" class="social-item blue-lt">
+                        <div class="thumbnail">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                        <div class="platform">
+                            <span class="platform-name">Twitter</span>
+                            <span class="account-name">Devvyhac</span>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-chevron-right"></i>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="page-section skills container-fluid m-0" id="skills">
+            <div class="heading">
+                <h2>My Skills</h2>
+            </div>
+            <div class="row m-0">
+                <div class="col-12 px-0 m-0">
+                    <div class="skill">
+                        <div class="skill-icon">
+                            <svg enable-background="new 0 0 512.001 512.001" viewBox="0 0 512.001 512.001" xmlns="http://www.w3.org/2000/svg"><g><path d="m450.185 324.194h-68.517c-4.142 0-7.5 3.357-7.5 7.5s3.358 7.5 7.5 7.5h68.517c4.142 0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5z"/><path d="m63.602 339.194h283.75c4.142 0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5h-283.75c-4.142 0-7.5 3.357-7.5 7.5s3.358 7.5 7.5 7.5z"/><path d="m63.602 295.556h386.583c4.142 0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5h-386.583c-4.142 0-7.5 3.357-7.5 7.5s3.358 7.5 7.5 7.5z"/><path d="m63.602 246.165h115.908c4.142 0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5h-115.908c-4.142 0-7.5 3.357-7.5 7.5s3.358 7.5 7.5 7.5z"/><path d="m63.529 382.831h386.583c4.142 0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5h-386.583c-4.142 0-7.5 3.357-7.5 7.5s3.358 7.5 7.5 7.5z"/><path d="m52.557 82.501c-12.44 0-22.561 10.094-22.561 22.5s10.121 22.5 22.561 22.5 22.561-10.094 22.561-22.5-10.121-22.5-22.561-22.5zm0 30c-4.169 0-7.561-3.364-7.561-7.5s3.392-7.5 7.561-7.5 7.561 3.364 7.561 7.5-3.392 7.5-7.561 7.5z"/><path d="m117.82 82.501c-12.44 0-22.561 10.094-22.561 22.5s10.121 22.5 22.561 22.5 22.561-10.094 22.561-22.5-10.121-22.5-22.561-22.5zm0 30c-4.169 0-7.561-3.364-7.561-7.5s3.392-7.5 7.561-7.5 7.561 3.364 7.561 7.5-3.392 7.5-7.561 7.5z"/><path d="m181.2 82.501c-12.44 0-22.561 10.094-22.561 22.5s10.121 22.5 22.561 22.5 22.561-10.094 22.561-22.5-10.121-22.5-22.561-22.5zm0 30c-4.169 0-7.561-3.364-7.561-7.5s3.392-7.5 7.561-7.5 7.561 3.364 7.561 7.5-3.392 7.5-7.561 7.5z"/><path d="m459.445 82.501h-135.444c-4.142 0-7.5 3.357-7.5 7.5s3.358 7.5 7.5 7.5h135.444c4.169 0 7.561 3.364 7.561 7.5s-3.392 7.5-7.561 7.5h-210.849c-4.169 0-7.561-3.364-7.561-7.5s3.392-7.5 7.561-7.5h40.405c4.142 0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5h-40.405c-12.44 0-22.561 10.094-22.561 22.5s10.121 22.5 22.561 22.5h210.849c12.44 0 22.561-10.094 22.561-22.5s-10.121-22.5-22.561-22.5z"/><path d="m474.501 54h-437c-20.678 0-37.5 16.822-37.5 37.5v96.5c-.142 9.734 15.143 9.729 15 0v-31.417h482v263.917c0 12.406-10.093 22.5-22.5 22.5h-330.5c-4.142 0-7.5 3.357-7.5 7.5s3.358 7.5 7.5 7.5h330.5c20.678 0 37.5-16.822 37.5-37.5v-329c0-20.677-16.822-37.5-37.5-37.5zm-459.5 87.584v-50.083c0-12.406 10.093-22.5 22.5-22.5h437c12.407 0 22.5 10.094 22.5 22.5v50.083z"/><path d="m109.001 443h-71.5c-12.407 0-22.5-10.094-22.5-22.5v-197.5c.142-9.734-15.143-9.729-15 0v197.5c0 20.678 16.822 37.5 37.5 37.5h71.5c4.142 0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5z"/></g>
+                            </svg>
+                        </div>
+                        <div class="label">Front End</div>
+                        <div class="desc">
+                            I have a decent skills in Client Side Web Development using 
+                            a lot of front end web technologies, including;
+                            ReactJS, HTML & CSS, JQuery, Bootstrap, MaterialUI
+                            and so on.
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-icon">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 380 380" style="enable-background:new 0 0 380 380;" xml:space="preserve">
+<g>
+	<path d="M91.425,157.435c-1.065-2.297-3.366-3.767-5.897-3.767c-0.005,0-0.01,0-0.015,0c-2.537,0.006-4.839,1.487-5.895,3.794
+		L47.402,227.83c-1.494,3.264-0.06,7.122,3.204,8.616c0.877,0.401,1.797,0.591,2.702,0.591c2.464,0,4.821-1.409,5.914-3.796
+		l8.08-17.649h36.75l8.193,17.677c1.51,3.257,5.373,4.674,8.631,3.164c3.257-1.51,4.673-5.374,3.164-8.631L91.425,157.435z
+		 M73.254,202.592l12.311-26.888l12.462,26.888H73.254z"/>
+	<path d="M166.496,152.865H135.07c-3.59,0-6.5,2.91-6.5,6.5v71.17c0,3.59,2.91,6.5,6.5,6.5c3.59,0,6.5-2.91,6.5-6.5V203.5h24.926
+		c13.96,0,25.316-11.357,25.316-25.316C191.813,164.223,180.456,152.865,166.496,152.865z M166.496,190.5H141.57v-24.635h24.926
+		c6.792,0,12.316,5.526,12.316,12.318C178.813,184.975,173.288,190.5,166.496,190.5z"/>
+	<path d="M203.313,152.865c-3.59,0-6.5,2.91-6.5,6.5v71.17c0,3.59,2.91,6.5,6.5,6.5s6.5-2.91,6.5-6.5v-71.17
+		C209.813,155.775,206.902,152.865,203.313,152.865z"/>
+	<path d="M368.317,46.487H11.684C5.241,46.487,0,51.73,0,58.173v263.656c0,6.442,5.241,11.684,11.684,11.684h356.634
+		c6.442,0,11.683-5.242,11.683-11.684V58.173C380,51.73,374.76,46.487,368.317,46.487z M280.949,259.268
+		c5.162-12.192,17.053-20.07,30.295-20.07c4.411,0,8.721,0.878,12.813,2.61c16.696,7.072,24.529,26.408,17.461,43.105
+		c-5.167,12.191-17.058,20.068-30.294,20.068c0,0,0,0-0.001,0c-4.411,0-8.721-0.878-12.81-2.611
+		c-8.089-3.424-14.361-9.793-17.659-17.935C277.455,276.294,277.524,267.356,280.949,259.268z M320.868,79.771
+		c6.844,0,12.387,5.547,12.387,12.387c0,6.842-5.543,12.387-12.387,12.387c-6.839,0-12.385-5.545-12.385-12.387
+		C308.483,85.318,314.029,79.771,320.868,79.771z M283.715,79.771c6.839,0,12.386,5.547,12.386,12.387
+		c0,6.842-5.547,12.387-12.386,12.387c-6.839,0-12.387-5.545-12.387-12.387C271.328,85.318,276.876,79.771,283.715,79.771z
+		 M246.561,79.771c6.839,0,12.381,5.547,12.381,12.387c0,6.842-5.542,12.387-12.381,12.387c-6.844,0-12.387-5.545-12.387-12.387
+		C234.175,85.318,239.718,79.771,246.561,79.771z M21.27,314.01V141.424H358.73v67.274c-1.537-2.202-3.677-4.02-6.327-5.143
+		l-20.614-8.726c-1.835-0.778-3.771-1.172-5.754-1.172c-5.956,0-11.303,3.54-13.623,9.02l-1.253,2.959
+		c-9.227,0.129-18.381,2.255-26.728,6.193l-2.426-2.107c-1.174-1.018-2.499-1.841-3.932-2.447c-1.841-0.779-3.782-1.174-5.771-1.174
+		c-4.276,0-8.341,1.858-11.154,5.099l-14.671,16.915c-2.583,2.986-3.855,6.794-3.581,10.735c0.285,3.941,2.084,7.535,5.064,10.115
+		l2.417,2.098c-2.755,8.849-3.563,18.179-2.365,27.344l-2.749,1.654c-6.981,4.2-9.242,13.302-5.039,20.293L249.044,315H22.26
+		C21.714,315,21.27,314.556,21.27,314.01z"/>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+                            </svg>
+                        </div>
+                        <div class="label">Back End</div>
+                        <div class="desc">
+                            I am competent with Server Side Web Development
+                            using a variety of server side technologies, including;
+                            NodeJS, PHP, ExpressJS and so on.
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-icon">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 316.89 316.89" style="enable-background:new 0 0 316.89 316.89;" xml:space="preserve">
+<g>
+	<path d="M182.47,212.195c0-0.754,0.036-1.5,0.057-2.25H38.5c-21.229,0-38.5,17.271-38.5,38.5s17.271,38.5,38.5,38.5h199.493
+		C205.905,277.24,182.47,247.408,182.47,212.195z M81.5,258.445h-35c-5.514,0-10-4.486-10-10c0-5.514,4.486-10,10-10h35
+		c5.514,0,10,4.486,10,10C91.5,253.959,87.014,258.445,81.5,258.445z"/>
+	<path d="M38.5,196.945h145.476c7.114-35.78,38.743-62.837,76.581-62.837c9.54,0,18.682,1.727,27.139,4.872
+		c-6.697-11.378-19.066-19.035-33.196-19.035h-216c-21.229,0-38.5,17.271-38.5,38.5S17.271,196.945,38.5,196.945z M46.5,148.445h35
+		c5.514,0,10,4.486,10,10c0,5.514-4.486,10-10,10h-35c-5.514,0-10-4.486-10-10C36.5,152.931,40.986,148.445,46.5,148.445z"/>
+	<path d="M38.5,106.945h216c21.228,0,38.5-17.271,38.5-38.5s-17.272-38.5-38.5-38.5h-216c-21.229,0-38.5,17.271-38.5,38.5
+		S17.271,106.945,38.5,106.945z M237.5,55.695c7.03,0,12.75,5.72,12.75,12.75s-5.72,12.75-12.75,12.75
+		c-7.03,0-12.75-5.72-12.75-12.75S230.47,55.695,237.5,55.695z M46.5,58.445h35c5.514,0,10,4.486,10,10s-4.486,10-10,10h-35
+		c-5.514,0-10-4.486-10-10S40.986,58.445,46.5,58.445z"/>
+	<path d="M260.557,155.862c-31.112,0-56.333,25.221-56.333,56.333s25.221,56.333,56.333,56.333s56.332-25.221,56.332-56.333
+		S291.669,155.862,260.557,155.862z M290.653,200.261l-35.654,35.653c-0.754,0.755-1.759,1.172-2.828,1.172
+		c-1.069,0-2.074-0.416-2.829-1.172l-17.88-17.88c-0.756-0.755-1.172-1.76-1.172-2.828c0-1.068,0.416-2.073,1.172-2.829l3.535-3.535
+		c0.754-0.755,1.759-1.172,2.828-1.172c1.068,0,2.073,0.416,2.828,1.171l11.518,11.517l29.291-29.289
+		c0.754-0.755,1.759-1.172,2.828-1.172c1.069,0,2.074,0.417,2.829,1.172l3.535,3.535c0.755,0.754,1.172,1.759,1.172,2.828
+		C291.825,198.501,291.409,199.506,290.653,200.261z"/>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+                            </svg>
+                        </div>
+                        <div class="label">Database Administration</div>
+                        <div class="desc">
+                            I can also create database schemas for both SQL oriented 
+                            or NoSQL oriented databases, MySQL and MongoDD respectively.
+                            I can also manage them properly and effectively.
+                        </div>
+                    </div>
                     
                 </div>
             </div>
         </div>
-        <div class="exps container-fluid" id="exps">
-            <h2 class="heading mb-5">My Experiences</h2>
+        <div class="page-section exps container-fluid" id="exps">
+            <div class="heading mb-4 mt-5">
+                <h2>My Experiences</h2>
+            </div>
             <div class="row">
                 <div class="exp col-12">
                     <div class="company">Zuri x i4G / <span class="role">Backend Intern - NodeJS</span></div>
@@ -89,7 +310,7 @@
                 </div>
             </div>
         </div>
-        <div class="portfolio container-fluid m-0" id="portfolio">
+        <div class="page-section portfolio container-fluid m-0" id="portfolio">
             <div class="heading">
                 <h2>Portfolio</h2>
             </div>
@@ -124,6 +345,19 @@
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 work-item">
                     <div class="item">
+                        <div class="work-media" style="background-image: url(./assets/Devvyhac.png);">
+                            <a href="http://devvyhac-resume.herokuapp.com/"></a>
+                        </div>
+                        <div class="info">
+                            <a href="http://devvyhac-resume.herokuapp.com/">
+                                <div class="work">Devvyhac</div>
+                                <p><span class="tag">portfolio</span> / <span class="work-date">23-Jan-2020</span></p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 work-item">
+                    <div class="item">
                         <div class="work-media" style="background-image: url(./assets/farm\ apropos.png);">
                             <a href="https://farmvest.000webhostapp.com/"></a>
                         </div>
@@ -137,7 +371,7 @@
                 </div>
             </div>
         </div>
-        <div class="contact" id="contact-me">
+        <div class="page-section contact" id="contact-me">
             <div class="contact-form">
                 <div >
                     <h3 class="contact-form-header"><i class="fa fa-id-card"></i>  <span>Get In Touch</span></h3>
@@ -147,7 +381,6 @@
                         <form class="" id="contact" name="contact">
                             <input class="contact-input" name="fullname" id="fullname" placeholder="Full Name" />
                             <input class="contact-input" name="email" id="email" placeholder="Email Address" />
-                            <input class="contact-input" name="subject" id="subject" placeholder="Subject" />
                             <textarea class="contact-input" rows="5" name="message" id="message" placeholder="Message"></textarea>
                             <button type="submit" id="contact-btn" class="contact-button">
                                 <span>Send Now</span> <i class="fa fa-arrow-right"></i>
@@ -163,10 +396,10 @@
             </div>
         </div>
         <div class="sponsors container-fluid m-0">
+            <div class="heading">
+                <h2>Affiliate Sponsors</h2>
+            </div>
             <div class="row m-0">
-                <div class="heading">
-                    <h2>Portfolio</h2>
-                </div>
                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 mb-3 org">
                     <div class="sponsor">
                         <a href="https://zuri.team">
@@ -197,11 +430,12 @@
             <div class="foot">
                 <h4>Devvyhac</h4>
                 <span>Created by Devvyhac || 17th-August-2021</span>
-                <div class="links mb-2">
-                    <a href="">About Me</a>
-                    <a href="">My Experiences</a>
-                    <a href="">My Portfolio</a>
-                    <a href="">Contact Me</a>
+                <div class="footer-links mb-2">
+                    <a href="#">About Me</a>
+                    <a href="#skills">My Skills</a>
+                    <a href="#exps">My Experiences</a>
+                    <a href="#portfolio">My Portfolio</a>
+                    <a href="#contact-me">Contact Me</a>
                 </div>
             </div>
         </div>

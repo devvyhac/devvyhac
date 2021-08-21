@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+
 html, body, *, *::before, *::after{
     box-sizing: border-box;
     margin: 0;
@@ -5,37 +8,17 @@ html, body, *, *::before, *::after{
     letter-spacing: 1px;
 }
 
+p, span, div, button, a, input, textarea {
+    font-family: 'Urbanist', sans-serif;
+}
+
 .container-fluid, .container, .row {
     margin: 0;
     padding: 0;
 }
 
-.about{
-    background: #52baca;
-    color: white;
-    height: calc(100vh - 56px);
-    display: flex;
-    align-items: center;
-    padding: 2rem;
-
-}
-
-.about p {
-    padding: 1rem 2rem 0 0;
-}
-
-.media {
-    background-image: url(../assets/larry2.jpg);
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    border-radius: 5px;
-}
-
 .exps {
-    padding: 2rem;
-    height: 100vh;
-    background-color: #fafafa;
+    padding: 3rem 6rem;
 }
 
 .exps .heading {
@@ -104,9 +87,14 @@ html, body, *, *::before, *::after{
     align-items: center;
 }
 
+.sponsors a {
+    color: black;
+    text-decoration: none;
+}
+
 .sponsor p {
-    margin-left: 1rem;
     font-weight: bold;
+    margin-top: .3rem;
 }
 
 

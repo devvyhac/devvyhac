@@ -1,0 +1,43 @@
+.skills {
+    min-height: 100vh;
+    padding: 6rem 2rem 2rem 2rem;
+}
+
+.skills .col-12 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills .skill {
+    text-align: center;
+    background: #fdfdfd;
+    width: 80%;
+    padding: 3rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.skills .skill .label{
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: .3rem;
+}
+
+.skills .skill-icon svg {
+    fill: #1C65FF;
+    width: 140px;
+    height: 140px;
+}
+
+@media all and (max-width: 411px) {
+    .skills .skill {
+        padding: 3rem 2rem;
+    }
+
+    .skills .skill .row{
+        --bs-gutter-x: 0 !important;
+    }
+}

@@ -1,0 +1,149 @@
+.navigation {
+    background-color: white;
+    width: 100%;
+    height: 75px;
+    position: fixed;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    padding: 0 4rem;
+    box-shadow: 0 1px 10px #858585;
+}
+
+.logo {
+    font-size: 1.7rem;
+    font-weight: bold;
+    font-family: 'Rampart One', cursive;
+}
+
+.links {
+    list-style-type: none;
+    display: flex;
+    margin-left: auto;
+    margin-bottom: 0;
+}
+
+.toggler {
+    display: none;
+    margin-left: auto;
+    font-size: 1.3rem;
+    border-radius: 50%;
+    background-color: #f3f3f3;
+    color: #616161;
+    padding: .5rem .7rem .5rem .8rem;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.toggler:hover {
+    background-color: #EB524A;
+    color: white;
+    transform: rotate(180deg);
+}
+
+.link a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: 2rem;
+    font-size: .8rem;
+    color: #EB524A;
+    position: relative;
+}
+
+.link a::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: #EB524A;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    transition: all .3s ease-in-out;
+}
+
+.link.active a::after {
+    width: 50px;
+}
+
+.link a:hover::after {
+    width: 40px;
+}
+
+.nav-2 {
+    position: fixed;
+    background: white;
+    width: 250px;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 12000;
+    display: none;
+    box-shadow: 1px 0 20px -2px #464646;
+    transition: all .3s ease-out;
+}
+
+.nav-2.reveal {
+    margin-left: 0;
+}
+
+.nav-2 .closer {
+    position: absolute;
+    cursor: pointer;
+    right: 15px;
+    top: 15px;
+    background: #EB524A;
+    color: white;
+    line-height: 0;
+    border-radius: 50%;
+    padding: .5rem .65rem .5rem .7rem;
+}
+
+.nav-2 .logo {
+    margin-left: 1rem;
+    padding: 1.5rem 0;
+}
+
+.nav-2 .links-2 {
+    border-top: 1px solid #e2e2e2;
+    list-style-type: none;
+    padding: 0;
+    padding-top: 2rem;
+}
+
+.nav-2 li a {
+    color: #EB524A;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: .6rem 1rem;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    transition: all .3s ease-in-out;
+}
+
+.nav-2 li a:hover, .nav-2 li a.active {
+    background: #EB524A;
+    color: white;
+}
+
+.nav-2 .sidebar {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+@media all and (max-width: 930px){
+    .links {
+        display: none;
+    }
+
+    .toggler {
+        display: block;
+    }
+
+    .nav-2 {
+        display: block;
+        margin-left: -300px;
+    }
+}

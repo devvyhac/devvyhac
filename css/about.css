@@ -1,0 +1,210 @@
+.about {
+    display: flex;
+    align-items: center;
+    padding: 6rem 4rem;
+    background-color: #051321;
+    min-height: 100vh;
+}
+
+
+
+.about-card {
+    background-color: #EB524A;
+    color: white;
+    flex: 5;
+    overflow: hidden;
+    border-radius: 7px;
+}
+
+.about-desc {
+    display: flex;
+    align-items: center;
+    padding-right: 1.5rem;
+}
+
+.about-desc .avatar {
+    min-width: 150px;
+    min-height: 150px;
+    background-color: #A91A1A;
+    margin: 1.5rem;
+    border-radius: 50%;
+    background-image: url(../assets/larry2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.about-card .name {
+    font-size: 1.5rem;
+}
+
+.about-card .intro {
+    font-size: .7rem;
+}
+
+.about-card .about-action {
+    background-color: #C63531;
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: .7rem .7rem .7rem 1.5rem;
+    text-transform: uppercase;
+    font-size: .8rem;
+    position: relative;
+    transition: all .3s ease-out;
+}
+
+.about-card .about-action:hover {
+    background-color: #b42d2b;
+}
+
+.about-action i.fa {
+    background-color: #FFB72C;
+    color: #C63533;
+    padding: 1rem;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -50%;
+    transition: all .3s ease-in-out;
+}
+
+.about-card .about-action:hover i.fa {
+    transform: rotate(180deg) scale(1.1);
+}
+
+@media all and (max-width: 960px) {
+    .about {
+        display: block;
+        padding-top: 10rem;
+    }
+
+    .about-card {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .about-socials {
+        width: 70%;
+        margin: 0 auto;
+        padding-left: 0;
+        margin-top: .5rem;
+    }
+}
+
+@media all and (max-width: 765px) {
+    .about {
+        padding: 10rem 6rem 7rem 6rem;
+    }
+
+    .about-desc {
+        flex-direction: column;
+        padding-right: 0;
+    }
+
+    .about-desc .name {
+        margin-bottom: .2rem;
+    }
+
+    .about-card {
+        width: 100%;
+        margin: 0;
+    }
+
+    .about-socials {
+        width: 100%;
+        margin: 0;
+        padding-left: 0;
+        margin-top: .5rem;
+    }
+
+    .about-desc .about-info {
+        padding: 2rem;
+        text-align: center;
+        padding-top: 0;
+    }
+}
+
+@media all and (max-width: 560px) {
+    .about {
+        padding: 8rem 2rem 7rem 2rem;
+    }
+}
+
+.about-socials {
+    flex: 4;
+    list-style-type: none;
+    margin-bottom: 0;
+}
+
+.about-socials li {
+    margin-bottom: .5rem;
+}
+
+.about-socials li:last-of-type {
+    margin-bottom: 0;
+}
+
+.about-socials .social-item {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
+.social-item .thumbnail {
+    padding: 1rem;
+}
+
+.social-item .thumbnail i {
+    padding: .7rem;
+    color: white;
+    border-radius: 50%;
+    font-size: 1.3rem;
+}
+
+.social-item.red .thumbnail i {
+    background-color: #EB524A;
+}
+
+.social-item.blue .thumbnail i {
+    background-color: #163F8F;
+    padding: .7rem .9rem;
+}
+
+.social-item.blue-lt .thumbnail i {
+    background-color: #0CB0FF;
+}
+
+.social-item .platform-name {
+    font-weight: bold;
+}
+
+.social-item .account-name {
+    font-size: .7rem;
+    color: #b3b3b3;
+}
+
+
+.social-item.red .platform-name {
+    color: #EB524A;
+}
+
+.social-item.blue .platform-name {
+    color: #163F8F;
+}
+
+.social-item.blue-lt .platform-name {
+    color: #0CB0FF;
+}
+
+.social-item .platform span {
+    display: block;
+}
+
+.social-item .icon {
+    margin-left: auto;
+    padding-right: 1.5rem;
+    color: #D4D4D4;
+}
