@@ -41,6 +41,7 @@
 
 .portfolio .item {
     margin: 0 .5rem;
+    margin-bottom: 2.5rem;
     overflow: hidden;
     background-color: white;
     border-radius: 5px;
@@ -50,7 +51,7 @@
 @media all and (max-width: 992px) {
 
     .portfolio .item{
-        margin-bottom: 3rem;
+        margin-bottom: 2.5rem;
     }
     
 }
