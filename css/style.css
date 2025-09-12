@@ -1,135 +1,143 @@
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rampart+One&display=swap");
 
-html, body, *, *::before, *::after{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    letter-spacing: 1px;
+html,
+body,
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1px;
 }
 
-p, span, div, button, a, input, textarea {
-    font-family: 'Urbanist', sans-serif;
+p,
+span,
+div,
+button,
+a,
+input,
+textarea {
+  font-family: "Urbanist", sans-serif;
 }
 
-.container-fluid, .container, .row {
-    margin: 0;
-    padding: 0;
+.container-fluid,
+.container,
+.row {
+  margin: 0;
+  padding: 0;
 }
 
 .exps {
-    padding: 3rem 4rem;
+  padding: 3rem 4rem;
 }
 
 .exps .heading {
-    color: #797979;
+  color: #797979;
 }
 
 .exp {
-    margin-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
-
-
 .company {
-    font-weight: bold;
-    color: #797979;
+  font-weight: bold;
+  color: #797979;
 }
 
 .company .role {
-    font-size: .8rem;
-    opacity: .7;
-    font-weight: lighter;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  font-weight: lighter;
 }
 
 .description {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .date {
-    font-size: .7rem;
-    color: red;
+  font-size: 0.7rem;
+  color: red;
 }
 
 .contact-me {
-    height: 100vh;
-    width: 100%;
-    background-color: #1859E6;
+  height: 100vh;
+  width: 100%;
+  background-color: #1859e6;
 }
 
 @media all and (max-width: 760px) {
-    .about {
-        min-height: calc(100vh - 56px);
-        height: auto;
-    }
+  .about {
+    min-height: calc(100vh - 56px);
+    height: auto;
+  }
 
-    .about .media {
-        height: 300px;
-        margin-top: 2rem;
-    }
+  .about .media {
+    height: 300px;
+    margin-top: 2rem;
+  }
 
-    .exps {
-        min-height: calc(100vh - 56px);
-        height: auto;
-    }
+  .exps {
+    min-height: calc(100vh - 56px);
+    height: auto;
+  }
 }
 
 .sponsors {
-    padding: 3rem 4rem;
+  padding: 3rem 4rem;
 }
 
 .sponsors .heading {
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 
 .sponsor {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .sponsors a {
-    color: black;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
 
 .sponsor p {
-    font-weight: bold;
-    margin-top: .3rem;
+  font-weight: bold;
+  margin-top: 0.3rem;
 }
-
 
 .org img {
-    width: 30%;
+  width: 30%;
 }
-
 
 .footer {
-    width: 100%;
-    background-color: #434343;
-    color: white;
-    display: flex;
-    align-items: center;
-    padding: 3rem 2rem;
+  width: 100%;
+  background-color: #434343;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 3rem 2rem;
 }
 
-.footer span{
-    display: block;
+.footer span {
+  display: block;
 }
 
 .footer a {
-    color: white;
-    text-decoration: none;
-    font-size: .8rem;
-    margin-right: .5rem;
-    opacity: .5;
-    transition: all .3s ease-out;
+  color: white;
+  text-decoration: none;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+  opacity: 0.5;
+  transition: all 0.3s ease-out;
 }
 
 .footer a:last-of-type {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 .footer a:hover {
-    color: red;
-    opacity: 1;
+  color: red;
+  opacity: 1;
 }
