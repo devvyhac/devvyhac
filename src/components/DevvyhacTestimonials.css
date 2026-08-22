@@ -1,0 +1,355 @@
+.ds-testimonials-awards-wrapper {
+  background: var(--bg-dark);
+}
+
+/* Testimonials Section */
+.ds-testimonials-section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.ds-testimonials-header {
+  margin-bottom: 3.5rem;
+}
+
+.ds-testimonials-title {
+  font-family: var(--font-sans);
+  font-size: clamp(2.25rem, 4vw, 3.5rem);
+  font-weight: 800;
+  color: var(--text-white);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.ds-testimonials-subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+/* Main Card */
+.ds-testimonial-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: 3.5rem;
+  position: relative;
+  margin-bottom: 3.5rem;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+  .ds-testimonials-section,
+  .ds-awards-section {
+    padding-top: 3.5rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .ds-testimonials-header,
+  .ds-awards-header {
+    margin-bottom: 2rem;
+  }
+
+  .ds-testimonials-title,
+  .ds-awards-title {
+    font-size: clamp(1.85rem, 7vw, 2.5rem);
+  }
+
+  .ds-testimonial-card {
+    padding: 1.75rem 1.25rem;
+    min-height: auto;
+    margin-bottom: 2rem;
+  }
+
+  .ds-card-top-row {
+    margin-bottom: 1.25rem;
+  }
+
+  .ds-quote-watermark {
+    display: none;
+  }
+
+  .ds-testimonial-quote {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .ds-client-tabs-row {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 1rem;
+    scrollbar-width: none;
+  }
+
+  .ds-client-tabs-row::-webkit-scrollbar {
+    display: none;
+  }
+
+  .ds-client-tab-item {
+    flex-shrink: 0;
+    min-width: 220px;
+    padding: 0.5rem 0.5rem 1.25rem 0.5rem;
+    gap: 0.85rem;
+  }
+
+  .client-avatar-wrapper {
+    width: 46px;
+    height: 46px;
+  }
+
+  .client-name {
+    font-size: 0.95rem;
+  }
+
+  .client-role-company {
+    font-size: 0.75rem;
+  }
+}
+
+.ds-card-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.ds-rating-stars {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.stars-group {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.star-icon {
+  flex-shrink: 0;
+}
+
+.rating-text {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.ds-quote-watermark {
+  color: rgba(255, 255, 255, 0.06);
+}
+
+.ds-testimonial-quote {
+  font-family: var(--font-sans);
+  font-size: clamp(1.25rem, 2.2vw, 1.65rem);
+  color: var(--text-white);
+  line-height: 1.6;
+  font-weight: 400;
+  max-width: 950px;
+}
+
+/* Client Tabs Switcher */
+.ds-client-tabs-container {
+  position: relative;
+}
+
+.ds-client-tabs-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .ds-client-tabs-row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.ds-client-tab-item {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem 0 2rem 0;
+  text-align: left;
+  position: relative;
+  opacity: 0.5;
+  transition: opacity var(--transition-normal), transform var(--transition-normal);
+  cursor: pointer;
+}
+
+.ds-client-tab-item:hover {
+  opacity: 0.85;
+}
+
+.ds-client-tab-item.active {
+  opacity: 1;
+}
+
+.client-avatar-wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+  background: #252833;
+}
+
+.client-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.client-meta-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.client-name {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-white);
+  margin-bottom: 0.2rem;
+}
+
+.client-role-company {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.company-highlight {
+  color: var(--accent-mint);
+  font-weight: 600;
+}
+
+/* Active Underline Indicator */
+.client-tab-active-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2.5px;
+  background: var(--accent-mint);
+  box-shadow: 0 0 10px rgba(85, 230, 165, 0.5);
+  border-radius: 2px;
+}
+
+.ds-client-tabs-track {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  z-index: 1;
+}
+
+/* Awards Section */
+.ds-awards-section {
+  padding-top: 5rem;
+  padding-bottom: 7rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ds-awards-header {
+  margin-bottom: 3.5rem;
+}
+
+.ds-awards-title {
+  font-family: var(--font-sans);
+  font-size: clamp(2.25rem, 4vw, 3.5rem);
+  font-weight: 800;
+  color: var(--text-white);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.ds-awards-subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+/* Awards List */
+.ds-awards-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ds-award-item {
+  display: grid;
+  grid-template-columns: 80px 1.5fr 1fr 40px;
+  align-items: center;
+  padding: 2rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background-color var(--transition-fast), padding-left var(--transition-fast);
+}
+
+@media (max-width: 768px) {
+  .ds-award-item {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 1.75rem 0.5rem;
+  }
+}
+
+.ds-award-item:hover {
+  background: rgba(255, 255, 255, 0.02);
+  padding-left: 1.5rem;
+}
+
+.award-year {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.award-title {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-white);
+  margin-bottom: 0.25rem;
+}
+
+.award-project {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent-mint);
+}
+
+.award-org {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--text-light);
+  display: block;
+}
+
+.award-category {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.award-trophy-icon {
+  color: var(--accent-mint);
+  opacity: 0.8;
+}

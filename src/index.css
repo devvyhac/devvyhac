@@ -1,0 +1,240 @@
+:root {
+  /* Color Tokens matching reference images */
+  --bg-dark: #17181c;
+  --bg-darker: #121316;
+  --bg-card: #1f2127;
+  --bg-card-hover: #262931;
+  --bg-badge: #55e6a5;
+  --bg-pill: rgba(255, 255, 255, 0.06);
+  --bg-pill-hover: rgba(255, 255, 255, 0.1);
+
+  --accent-mint: #55e6a5;
+  --accent-mint-hover: #46d895;
+  --accent-mint-dim: rgba(85, 230, 165, 0.12);
+  --accent-mint-glow: rgba(85, 230, 165, 0.25);
+  --accent-mint-text: #17181c;
+
+  --text-white: #ffffff;
+  --text-light: #eceef2;
+  --text-muted: #8a8f98;
+  --text-dim: #5c6270;
+  --text-dark: #17181c;
+
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-card: rgba(255, 255, 255, 0.06);
+  --border-hover: rgba(85, 230, 165, 0.4);
+
+  /* Typography */
+  --font-mono: 'Space Mono', 'JetBrains Mono', monospace;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Space Mono', monospace;
+  --font-italic: 'Playfair Display', Georgia, serif;
+
+  /* Dimensions */
+  --header-height: 80px;
+  --container-max-width: 1240px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-mono);
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+  overflow-x: hidden;
+  position: relative;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom Selection */
+::selection {
+  background-color: var(--accent-mint);
+  color: var(--text-dark);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2b2e38;
+  border-radius: var(--radius-sm);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-mint);
+}
+
+/* Base Layout Containers */
+.ds-container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media (max-width: 768px) {
+  .ds-container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+.ds-section {
+  position: relative;
+  padding: 6.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .ds-section {
+    padding: 4rem 0;
+  }
+}
+
+/* Typography styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--text-white);
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Mint Green Underlined Link */
+.mint-link {
+  color: var(--accent-mint);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.mint-link:hover {
+  opacity: 0.85;
+  transform: translateX(2px);
+}
+
+/* Dark Circular Icon Buttons (Search & Menu) */
+.circle-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #1e2026;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.22s ease;
+  will-change: transform;
+}
+
+.circle-btn:hover {
+  background: #2a2d36;
+  transform: scale(1.08);
+}
+
+.circle-btn:active {
+  transform: scale(0.95);
+  transition-duration: 0.1s;
+}
+
+/* Pill badges */
+.tech-pill {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-light);
+  letter-spacing: 0.02em;
+}
+
+/* Floating animation utilities */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.animate-float {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: floatSlow 6s ease-in-out infinite 1.5s;
+}
+
+.animate-float-reverse {
+  animation: floatSlow 5.5s ease-in-out infinite 0.75s reverse;
+}

@@ -1,0 +1,427 @@
+.ds-intro-section {
+  background: var(--bg-dark);
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+}
+
+.ds-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 5rem;
+  align-items: flex-start;
+  margin-bottom: 6rem;
+}
+
+@media (max-width: 992px) {
+  .ds-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+    margin-bottom: 4rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .ds-intro-section {
+    padding-top: 1.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .ds-intro-grid {
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .ds-service-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .service-card-title {
+    font-size: 1.2rem;
+  }
+
+  .service-card-desc {
+    font-size: 0.82rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .ds-introduce-tag {
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .ds-introduce-title {
+    font-size: clamp(1.85rem, 7vw, 2.5rem);
+    margin-bottom: 1.25rem;
+  }
+
+  .ds-introduce-philosophy {
+    font-size: 1.1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .ds-introduce-desc {
+    font-size: 0.86rem;
+    line-height: 1.7;
+  }
+
+  .ds-logos-banner {
+    padding-top: 2.5rem;
+  }
+
+  .ds-logos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .ds-client-logo-item {
+    min-height: 80px;
+    padding: 1rem 0.75rem;
+  }
+}
+
+/* Left Column: Service Cards */
+.ds-services-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ds-service-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  padding: 2rem 2.25rem;
+  transition: transform var(--transition-normal), border-color var(--transition-normal), box-shadow var(--transition-normal);
+  cursor: pointer;
+  position: relative;
+}
+
+.ds-service-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(85, 230, 165, 0.35);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.service-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.service-card-title {
+  font-family: var(--font-sans);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--text-white);
+  letter-spacing: -0.01em;
+}
+
+.service-card-title.title-mint {
+  color: var(--accent-mint);
+}
+
+.service-icon-wrap {
+  color: var(--accent-mint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-card-desc {
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.service-card-footer {
+  display: flex;
+  align-items: center;
+}
+
+.service-projects-count {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-light);
+  letter-spacing: 0.08em;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1.5px;
+  text-transform: uppercase;
+}
+
+/* Right Column: Introduce */
+.ds-introduce-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 0.5rem;
+}
+
+.ds-introduce-tag {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.04em;
+}
+
+.ds-introduce-title {
+  font-family: var(--font-sans);
+  font-size: clamp(2.5rem, 4.5vw, 3.75rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--text-white);
+  letter-spacing: -0.02em;
+  margin-bottom: 2rem;
+}
+
+.ds-introduce-philosophy {
+  font-family: var(--font-italic);
+  font-style: italic;
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+  color: var(--text-light);
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.ds-introduce-desc {
+  font-family: var(--font-mono);
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.85;
+}
+
+/* Client Logos Banner */
+.ds-logos-banner {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 4.5rem;
+}
+
+.ds-logos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+@media (max-width: 992px) {
+  .ds-logos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ds-logos-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.ds-client-logo-item {
+  background: #1c1e23;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 1.5rem 1.25rem;
+  min-height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  opacity: 0.85;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 4px 14px rgba(0, 0, 0, 0.25);
+  transition: transform 0.32s cubic-bezier(0.25, 1, 0.5, 1),
+              background 0.3s ease,
+              border-color 0.3s ease,
+              box-shadow 0.32s ease,
+              color 0.3s ease,
+              opacity 0.3s ease;
+  user-select: none;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+
+.ds-client-logo-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.04), transparent);
+  transition: left 0.6s ease;
+  pointer-events: none;
+}
+
+.ds-client-logo-item:hover {
+  opacity: 1;
+  color: #ffffff;
+  background: #24272e;
+  border-color: rgba(255, 255, 255, 0.22);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5),
+              0 0 20px rgba(255, 255, 255, 0.05),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.ds-client-logo-item:hover::before {
+  left: 100%;
+}
+
+/* Logo Specific Box Styling */
+.logo-blb-box {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.blb-badge {
+  background: #fff;
+  color: #17181c;
+  font-family: var(--font-sans);
+  font-weight: 900;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+}
+
+.blb-text {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0.06em;
+}
+
+.logo-cw-box {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.cw-symbol {
+  font-family: var(--font-italic);
+  font-style: italic;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.cw-name {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+}
+
+.logo-serenity-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.serenity-crest {
+  font-family: var(--font-italic);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.serenity-text {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+}
+
+.logo-artchive-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.artchive-name {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.artchive-sub {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+}
+
+.logo-innovations-box {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.innovations-icon {
+  flex-shrink: 0;
+}
+
+.innovations-text {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  line-height: 1.25;
+  letter-spacing: 0.05em;
+}
+
+.logo-neuton-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.neuton-name {
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+}
+
+.neuton-sub {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+}
+
+.logo-papillon-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.papillon-name {
+  font-family: 'Playfair Display', cursive, serif;
+  font-style: italic;
+  font-size: 1.5rem;
+}
+
+.papillon-sub {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+}
+
+.logo-habits-box {
+  font-family: var(--font-sans);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}

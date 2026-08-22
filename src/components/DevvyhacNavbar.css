@@ -1,0 +1,203 @@
+.ds-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  transition: background-color var(--transition-normal), backdrop-filter var(--transition-normal), border-color var(--transition-normal);
+}
+
+.ds-navbar-scrolled {
+  background: rgba(23, 24, 28, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ds-navbar-container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .ds-navbar-container {
+    padding: 0 1.25rem;
+  }
+}
+
+/* Brand */
+.ds-brand {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--text-white);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+/* Center Nav Links (Desktop) */
+.ds-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2.25rem;
+}
+
+@media (max-width: 900px) {
+  .ds-nav-links {
+    display: none;
+  }
+}
+
+.ds-nav-link {
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+  transition: color var(--transition-fast);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.ds-nav-link:hover {
+  color: var(--text-white);
+}
+
+.ds-nav-link.active {
+  color: var(--accent-mint);
+  font-weight: 600;
+}
+
+.active-brackets {
+  color: var(--accent-mint);
+  display: inline-flex;
+  gap: 0.35rem;
+}
+
+.active-label {
+  color: var(--accent-mint);
+}
+
+/* Right Section */
+.ds-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Desktop Socials & Search Group */
+.ds-nav-socials-desktop {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Social Icon Link Buttons (Desktop) - No borders, smooth iOS scale grow */
+.ds-nav-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--text-muted);
+  background: #1e2026;
+  border: none;
+  box-shadow: none;
+  transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.22s ease, color 0.22s ease;
+  will-change: transform;
+}
+
+.ds-nav-icon-link:hover {
+  color: var(--text-white);
+  background: #2a2d37;
+  border: none;
+  box-shadow: none;
+  transform: scale(1.08);
+}
+
+.ds-nav-icon-link:active {
+  transform: scale(0.95);
+  transition-duration: 0.1s;
+}
+
+.ds-gmail-link {
+  color: var(--text-muted);
+}
+
+.ds-gmail-link:hover {
+  color: var(--text-white);
+  background: #2a2d37;
+  border: none;
+  box-shadow: none;
+}
+
+/* Search button - No border, smooth iOS scale grow */
+.search-btn,
+.circle-btn.search-btn {
+  width: 40px;
+  height: 40px;
+  background: #1e2026;
+  border: none !important;
+  box-shadow: none !important;
+  color: var(--text-muted);
+  transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.22s ease, color 0.22s ease;
+  will-change: transform;
+}
+
+.search-btn:hover,
+.circle-btn.search-btn:hover {
+  background: #2a2d37;
+  border: none !important;
+  box-shadow: none !important;
+  color: var(--text-white);
+  transform: scale(1.08);
+}
+
+.search-btn:active,
+.circle-btn.search-btn:active {
+  transform: scale(0.95);
+  transition-duration: 0.1s;
+}
+
+/* Mobile Hamburger Menu Toggle Button */
+.ds-mobile-menu-btn,
+.circle-btn.ds-mobile-menu-btn {
+  display: none !important;
+  width: 44px;
+  height: 44px;
+}
+
+/* Desktop and Large Screens (> 900px): Force hide hamburger */
+@media (min-width: 901px) {
+  .ds-mobile-menu-btn,
+  .circle-btn.ds-mobile-menu-btn {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+}
+
+/* Mobile Screens (<= 900px): Hide desktop socials group and show hamburger menu */
+@media (max-width: 900px) {
+  .ds-nav-socials-desktop {
+    display: none !important;
+  }
+
+  .ds-mobile-menu-btn,
+  .circle-btn.ds-mobile-menu-btn {
+    display: inline-flex !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+}

@@ -1,0 +1,365 @@
+.ds-hero-section {
+  position: relative;
+  min-height: calc(100vh - var(--header-height));
+  display: flex;
+  align-items: center;
+  padding-top: calc(var(--header-height) + 2rem);
+  padding-bottom: 5rem;
+  overflow: hidden;
+  background: var(--bg-dark);
+}
+
+.ds-hero-container {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  align-items: center;
+  gap: 3.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  .ds-hero-container {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    text-align: left;
+  }
+}
+
+/* Left Column */
+.ds-hero-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Badge */
+.ds-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  background: var(--accent-mint);
+  color: var(--text-dark);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+  letter-spacing: 0.01em;
+}
+
+/* Headline */
+.ds-hero-headline {
+  font-family: var(--font-sans);
+  font-size: clamp(2.5rem, 5vw, 4.25rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--text-white);
+  letter-spacing: -0.03em;
+  margin-bottom: 1.75rem;
+}
+
+/* Description */
+.ds-hero-desc {
+  font-family: var(--font-mono);
+  font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin-bottom: 2.5rem;
+}
+
+/* CTA */
+.ds-hero-cta {
+  margin-bottom: 4rem;
+}
+
+.ds-hero-chat-link {
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--accent-mint);
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 2.5px;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.ds-hero-chat-link:hover {
+  opacity: 0.85;
+  transform: translateX(3px);
+}
+
+/* Stats Row */
+.ds-hero-stats-row {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+@media (max-width: 640px) {
+  .ds-hero-stats-row {
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+}
+
+.ds-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.ds-stat-num {
+  font-family: var(--font-sans);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 800;
+  color: var(--text-white);
+  line-height: 1;
+}
+
+.ds-stat-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.ds-stat-line {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.35;
+}
+
+/* Right Column Visuals */
+.ds-hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.ds-hero-visual-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dark Concentric Circular Backdrops */
+.ds-hero-circle-backdrop {
+  position: absolute;
+  width: 110%;
+  height: 110%;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #242730 0%, #1a1c22 60%, #17181c 100%);
+  opacity: 0.9;
+  z-index: 0;
+}
+
+.ds-hero-circle-backdrop-inner {
+  position: absolute;
+  width: 85%;
+  height: 85%;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, rgba(40, 44, 54, 0.7) 0%, rgba(23, 24, 28, 0) 75%);
+  z-index: 1;
+}
+
+/* Portrait Image Frame */
+.ds-hero-image-frame {
+  position: relative;
+  width: 92%;
+  height: 92%;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ds-hero-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  filter: contrast(1.05) brightness(1.0);
+}
+
+.ds-hero-vignette {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at center 42%, transparent 65%, rgba(23, 24, 28, 0.55) 90%, #17181c 100%);
+  pointer-events: none;
+}
+
+/* Floating 3D Tech Discs */
+.ds-floating-badge {
+  position: absolute;
+  z-index: 4;
+}
+
+.badge-disc {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #1c1e24;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.6), inset 0 2px 4px rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.badge-disc:hover {
+  transform: scale(1.08);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), inset 0 2px 6px rgba(255, 255, 255, 0.2);
+}
+
+.badge-disc.small-disc {
+  width: 68px;
+  height: 68px;
+  padding: 15px;
+}
+
+.badge-disc.large-disc {
+  width: 110px;
+  height: 110px;
+  padding: 22px;
+}
+
+@media (max-width: 640px) {
+  .ds-hero-section {
+    padding-top: calc(var(--header-height) + 1rem);
+    padding-bottom: 3.5rem;
+  }
+
+  .ds-hero-badge {
+    margin-bottom: 1.25rem;
+    font-size: 0.78rem;
+  }
+
+  .ds-hero-headline {
+    font-size: clamp(2rem, 7.5vw, 2.75rem);
+    margin-bottom: 1.25rem;
+  }
+
+  .ds-hero-desc {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    margin-bottom: 1.75rem;
+  }
+
+  .ds-hero-cta {
+    margin-bottom: 2.5rem;
+  }
+
+  .ds-hero-stats-row {
+    flex-direction: row;
+    gap: 1.5rem 2rem;
+    flex-wrap: wrap;
+  }
+
+  .ds-stat-num {
+    font-size: 2.25rem;
+  }
+
+  .ds-stat-line {
+    font-size: 0.65rem;
+  }
+
+  .ds-hero-visual-wrapper {
+    max-width: 320px;
+  }
+
+  .badge-disc {
+    width: 48px;
+    height: 48px;
+    padding: 9px;
+  }
+  .badge-disc.small-disc {
+    width: 44px;
+    height: 44px;
+    padding: 8px;
+  }
+  .badge-disc.large-disc {
+    width: 58px;
+    height: 58px;
+    padding: 11px;
+  }
+
+  .ds-badge-angular {
+    left: -4px;
+    bottom: 22%;
+  }
+
+  .ds-badge-python {
+    right: 2px;
+    top: 26%;
+  }
+
+  .ds-badge-js {
+    right: -4px;
+    bottom: 6%;
+  }
+}
+
+@media (max-width: 360px) {
+  .ds-hero-visual-wrapper {
+    max-width: 270px;
+  }
+
+  .ds-hero-stats-row {
+    gap: 1.25rem;
+  }
+}
+
+.badge-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Positioning of floating discs (Desktop default) */
+/* 1. Go Badge: Left/Middle */
+.ds-badge-angular {
+  left: -20px;
+  bottom: 25%;
+}
+
+/* 2. C# Badge: Right/Top */
+.ds-badge-python {
+  right: 5%;
+  top: 30%;
+}
+
+/* 3. Docker Badge: Right/Bottom */
+.ds-badge-js {
+  right: -25px;
+  bottom: 8%;
+}
+
+/* Neon Green Glowing Accent Dot */
+.ds-neon-dot {
+  position: absolute;
+  right: 2%;
+  top: 60%;
+  width: 8px;
+  height: 8px;
+  background: var(--accent-mint);
+  border-radius: 50%;
+  box-shadow: 0 0 12px var(--accent-mint), 0 0 24px var(--accent-mint);
+  z-index: 3;
+  animation: pulseGlow 3s ease-in-out infinite;
+}

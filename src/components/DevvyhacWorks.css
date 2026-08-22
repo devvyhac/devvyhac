@@ -1,0 +1,378 @@
+.ds-works-section {
+  background: var(--bg-dark);
+  padding-top: 5rem;
+  padding-bottom: 7rem;
+}
+
+.ds-works-header {
+  margin-bottom: 4rem;
+}
+
+.ds-works-title {
+  font-family: var(--font-sans);
+  font-size: clamp(2.25rem, 4vw, 3.5rem);
+  font-weight: 800;
+  color: var(--text-white);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.ds-works-subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+/* 2-Column Staggered Grid */
+.ds-works-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .ds-works-section {
+    padding-top: 3.5rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .ds-works-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .ds-works-title {
+    font-size: clamp(1.85rem, 7vw, 2.5rem);
+  }
+
+  .ds-works-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .ds-works-left-col,
+  .ds-works-right-col {
+    display: contents;
+  }
+
+  /* Mobile Project Ordering:
+     1. RelayLedger
+     2. SyncVault
+     3. Tradefy / Empire
+     4. Go TCP/TLS Chat
+     5. All Projects & NDA Notice
+  */
+  .ds-work-relayledger {
+    order: 1 !important;
+  }
+
+  .ds-work-syncvault {
+    order: 2 !important;
+  }
+
+  .ds-work-empire {
+    order: 3 !important;
+  }
+
+  .ds-work-gotcp {
+    order: 4 !important;
+  }
+
+  .ds-works-bottom-info {
+    order: 5 !important;
+    padding-top: 1rem;
+  }
+
+  .ds-work-card {
+    padding: 1.5rem 1.25rem;
+    border-radius: 14px;
+  }
+
+  .ds-work-name {
+    font-size: 1.35rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ds-work-card {
+    padding: 1.2rem 1rem;
+  }
+
+  .ds-work-header {
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .ds-work-name {
+    font-size: 1.2rem;
+  }
+
+  .ds-work-media-container {
+    aspect-ratio: 16 / 11;
+  }
+}
+
+/* Left Column with offset for Go TCP and SyncVault */
+.ds-works-left-col {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+@media (min-width: 901px) {
+  .ds-work-lewis {
+    margin-top: 8rem;
+  }
+}
+
+/* Right Column with RelayLedger & Empire */
+.ds-works-right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+/* Project Card Base */
+.ds-work-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  transition: transform var(--transition-normal), border-color var(--transition-normal), box-shadow var(--transition-normal);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.ds-work-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(85, 230, 165, 0.4);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+}
+
+.ds-work-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.75rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.ds-work-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.ds-work-name {
+  font-family: var(--font-sans);
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--text-white);
+  letter-spacing: -0.01em;
+}
+
+.ds-work-name.name-mint {
+  color: var(--accent-mint);
+}
+
+.ds-card-direct-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.25rem 0.55rem;
+  border-radius: 4px;
+  transition: all var(--transition-fast);
+}
+
+.ds-card-direct-link:hover {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.ds-card-direct-link.link-mint {
+  color: var(--accent-mint);
+  background: rgba(85, 230, 165, 0.08);
+  border-color: rgba(85, 230, 165, 0.25);
+}
+
+.ds-card-direct-link.link-mint:hover {
+  background: rgba(85, 230, 165, 0.2);
+  border-color: var(--accent-mint);
+}
+
+.ds-work-tags {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.ds-work-tag-pill {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+}
+
+/* Media Container with Full Edge-to-Edge Blur & Anti-Aliased Corner Clipping */
+.ds-work-media-container {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: #121316;
+  aspect-ratio: 16 / 10;
+  transform: translateZ(0);
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  mask-image: -webkit-radial-gradient(white, black);
+  isolation: isolate;
+}
+
+.ds-work-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, filter;
+}
+
+.ds-work-card:hover .ds-work-img {
+  transform: scale(1.08);
+  filter: blur(6px);
+}
+
+.ds-work-hover-overlay {
+  position: absolute;
+  inset: -4px;
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+  background: rgba(16, 18, 24, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 1.5rem;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.ds-work-card:hover .ds-work-hover-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.ds-hover-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  transform: translateY(8px);
+  transition: transform var(--transition-normal);
+}
+
+.ds-work-card:hover .ds-hover-actions {
+  transform: translateY(0);
+}
+
+.ds-work-live-btn {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  background: var(--accent-mint);
+  color: var(--text-dark);
+  padding: 0.65rem 1.15rem;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  letter-spacing: 0.02em;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.ds-work-live-btn:hover {
+  background: var(--accent-mint-hover);
+  transform: translateY(-2px);
+}
+
+.ds-work-view-btn {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 0.65rem 1.15rem;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.ds-work-card:hover .ds-work-view-btn:hover {
+  border-color: var(--accent-mint);
+  color: var(--accent-mint);
+}
+
+/* Bottom NDA & All Projects Info */
+.ds-works-bottom-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding-top: 2rem;
+}
+
+.ds-all-projects-link {
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent-mint);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2.5px;
+  letter-spacing: 0.08em;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.ds-all-projects-link:hover {
+  opacity: 0.85;
+  transform: translateX(3px);
+}
+
+.ds-nda-notice {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.ds-contact-inline-link {
+  color: var(--accent-mint);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.ds-contact-inline-link:hover {
+  opacity: 0.85;
+}
