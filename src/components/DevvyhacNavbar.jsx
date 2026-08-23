@@ -27,7 +27,7 @@ export default function DevvyhacNavbar({
   }, []);
 
   const navLinks = [
-    { id: 'services', label: 'Specialties', isSpecial: true },
+    { id: 'specialties', label: 'Specialties', isSpecial: true },
     { id: 'works', label: 'Works', isSpecial: false },
     { id: 'cv', label: 'CV / Experience', isSpecial: false },
     { id: 'notes', label: 'Notes', isSpecial: false },
@@ -55,7 +55,7 @@ export default function DevvyhacNavbar({
           {navLinks.map((link) => {
             const isActive =
               activeSection === link.id ||
-              (link.id === 'services' && activeSection === 'hero');
+              (link.id === 'specialties' && activeSection === 'hero');
             return (
               <a
                 key={link.id}

@@ -42,7 +42,7 @@ export default function DevvyhacModals({
   const [searchQuery, setSearchQuery] = useState('');
 
   const drawerNavLinks = [
-    { id: 'services', label: 'Specialties' },
+    { id: 'specialties', label: 'Specialties' },
     { id: 'works', label: 'Works & Systems' },
     { id: 'cv', label: 'CV / Experience' },
     { id: 'testimonials', label: 'Testimonials' },
@@ -113,7 +113,7 @@ export default function DevvyhacModals({
               s.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
               s.description.toLowerCase().includes(searchQuery.toLowerCase())
           )
-          .map((s) => ({ ...s, resultType: 'Specialty', target: 'services' })),
+          .map((s) => ({ ...s, resultType: 'Specialty', target: 'specialties' })),
         ...devvyhacNotes
           .filter((n) => n.title.toLowerCase().includes(searchQuery.toLowerCase()))
           .map((n) => ({ ...n, resultType: 'Note', target: 'notes' })),
@@ -151,7 +151,7 @@ export default function DevvyhacModals({
                 <div className="ds-search-quick-links">
                   <span className="search-quick-title">Quick Navigation</span>
                   <div className="quick-links-row">
-                    {['services', 'works', 'cv', 'testimonials', 'awards', 'notes', 'contacts'].map(
+                    {['specialties', 'works', 'cv', 'testimonials', 'awards', 'notes', 'contacts'].map(
                       (sec) => (
                         <button
                           key={sec}
@@ -162,7 +162,7 @@ export default function DevvyhacModals({
                             onCloseSearch();
                           }}
                         >
-                          #{sec}
+                          {sec === 'specialties' ? 'Specialties' : sec.charAt(0).toUpperCase() + sec.slice(1)}
                         </button>
                       )
                     )}

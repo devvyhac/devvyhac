@@ -22,7 +22,7 @@ export default function DevvyhacServicesIntro({ onSelectService, onSelectProject
   };
 
   return (
-    <section className="ds-section ds-intro-section" id="services">
+    <section className="ds-section ds-intro-section" id="specialties">
       <div className="ds-container">
         {/* Main 2-column Grid: Left 3 Cards, Right Intro Text */}
         <div className="ds-intro-grid">

@@ -10,7 +10,7 @@ import DevvyhacFooter from './components/DevvyhacFooter';
 import DevvyhacModals from './components/DevvyhacModals';
 
 export default function App() {
-  const [activeSection, setActiveSection] = useState('services');
+  const [activeSection, setActiveSection] = useState('specialties');
   const [searchOpen, setSearchOpen] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
@@ -22,12 +22,14 @@ export default function App() {
 
   // Smooth scroll handler that updates URL hash and immediately locks & syncs active state
   const handleNavigate = (sectionId, updateHistory = true) => {
-    const targetSection = sectionId === 'hero' ? 'services' : sectionId;
+    const targetSection =
+      sectionId === 'hero' || sectionId === 'services' ? 'specialties' : sectionId;
     setActiveSection(targetSection);
 
     // Reflect section in the browser search/address bar
     if (updateHistory) {
-      const newHash = sectionId === 'hero' ? '#hero' : `#${sectionId}`;
+      const newHash =
+        sectionId === 'hero' ? '#hero' : `#${targetSection}`;
       if (window.location.hash !== newHash) {
         window.history.pushState(null, '', newHash);
       }
@@ -40,7 +42,7 @@ export default function App() {
       isNavigatingRef.current = false;
     }, 900);
 
-    const el = document.getElementById(sectionId);
+    const el = document.getElementById(targetSection === 'specialties' && sectionId === 'hero' ? 'hero' : targetSection);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
     }
@@ -48,19 +50,21 @@ export default function App() {
 
   // Sync initial URL hash on page load and support browser Back/Forward navigation
   useEffect(() => {
-    const initialHash = window.location.hash.replace('#', '');
+    const rawHash = window.location.hash.replace('#', '');
+    const initialHash = rawHash === 'services' ? 'specialties' : rawHash;
     if (initialHash) {
       setTimeout(() => {
         const el = document.getElementById(initialHash);
         if (el) {
           el.scrollIntoView({ behavior: 'smooth' });
-          setActiveSection(initialHash === 'hero' ? 'services' : initialHash);
+          setActiveSection(initialHash === 'hero' ? 'specialties' : initialHash);
         }
       }, 150);
     }
 
     const handleHashChange = () => {
-      const hash = window.location.hash.replace('#', '') || 'hero';
+      const raw = window.location.hash.replace('#', '') || 'hero';
+      const hash = raw === 'services' ? 'specialties' : raw;
       handleNavigate(hash, false);
     };
 
@@ -88,7 +92,7 @@ export default function App() {
   useEffect(() => {
     const sectionIds = [
       'hero',
-      'services',
+      'specialties',
       'works',
       'cv',
       'testimonials',
@@ -125,7 +129,7 @@ export default function App() {
               const rect = el.getBoundingClientRect();
               // A section is active if the focus line (38% from top) is between its top and bottom bounds
               if (rect.top <= focusPoint && rect.bottom > focusPoint) {
-                const target = id === 'hero' ? 'services' : id;
+                const target = id === 'hero' ? 'specialties' : id;
                 setActiveSection(target);
                 if (window.location.hash !== `#${id}`) {
                   window.history.replaceState(null, '', `#${id}`);

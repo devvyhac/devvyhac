@@ -23,10 +23,10 @@ export default function DevvyhacFooter({ onNavigate }) {
 
         <div className="ds-footer-links">
           <a
-            href="#services"
+            href="#specialties"
             onClick={(e) => {
               e.preventDefault();
-              onNavigate('services');
+              onNavigate('specialties');
             }}
           >
             Specialties
