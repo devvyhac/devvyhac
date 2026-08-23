@@ -345,10 +345,11 @@ export const fullCvData = {
   ],
   education: [
     {
-      degree: 'Bachelor of Science / Engineering Background',
+      degree: 'Bachelor of Education (B.Ed.) — Primary Education Studies',
       school: 'University of Ilorin',
       location: 'Ilorin, Nigeria',
-      notes: 'Focused on computation, software engineering principles, algorithms, and systems architecture.',
+      notes:
+        'Graduated from University of Ilorin before dedicating full focus post-graduation to deep self-directed backend engineering, distributed systems, and socket infrastructure in Go & C#/.NET.',
     },
   ],
 };
