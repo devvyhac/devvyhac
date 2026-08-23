@@ -238,3 +238,63 @@ button {
 .animate-float-reverse {
   animation: floatSlow 5.5s ease-in-out infinite 0.75s reverse;
 }
+
+/* ==========================================================================
+   BRAND LOGO & MONOGRAM COMPONENT
+   ========================================================================== */
+
+.ds-brand-link {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.ai-brand-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+.ai-brand-wrap:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+.ai-logo-icon {
+  filter: drop-shadow(0 2px 8px rgba(85, 230, 165, 0.25));
+  transition: filter var(--transition-fast), transform var(--transition-fast);
+}
+
+.ai-brand-wrap:hover .ai-logo-icon {
+  filter: drop-shadow(0 4px 14px rgba(85, 230, 165, 0.45));
+}
+
+.ai-brand-text {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  line-height: 1;
+}
+
+.ai-brand-first {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.ai-brand-last {
+  font-weight: 400;
+  color: #f1f3f7;
+}
+
+@media (max-width: 480px) {
+  .ai-brand-text {
+    font-size: 1.05rem;
+  }
+}

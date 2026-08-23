@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Search, X, Menu, Mail } from 'lucide-react';
 import { TwitterIcon, GithubIcon } from './TechIcons';
+import { AiBrand } from './AiLogo';
 import './DevvyhacNavbar.css';
 
 export default function DevvyhacNavbar({
@@ -43,9 +44,10 @@ export default function DevvyhacNavbar({
             e.preventDefault();
             onNavigate('hero');
           }}
-          className="ds-brand"
+          className="ds-brand-link"
+          aria-label="Abdulqudus Ismail Home"
         >
-          Abdulqudus Ismail
+          <AiBrand iconSize={32} />
         </a>
 
         {/* Center Nav Links (Desktop) */}

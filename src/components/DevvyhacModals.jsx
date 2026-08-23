@@ -13,6 +13,7 @@ import {
   Terminal,
 } from 'lucide-react';
 import { TwitterIcon, GithubIcon } from './TechIcons';
+import { AiBrand } from './AiLogo';
 import {
   devvyhacProjects,
   devvyhacServices,
@@ -206,7 +207,9 @@ export default function DevvyhacModals({
       >
         <div className="ds-nav-drawer" onClick={(e) => e.stopPropagation()}>
           <div className="ds-drawer-header">
-            <span className="drawer-brand">Abdulqudus Ismail</span>
+            <div className="drawer-brand-wrap" onClick={onCloseDrawer}>
+              <AiBrand iconSize={26} />
+            </div>
             <button
               type="button"
               onClick={onCloseDrawer}

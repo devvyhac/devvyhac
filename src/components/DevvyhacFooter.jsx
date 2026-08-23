@@ -1,6 +1,7 @@
 import React from 'react';
 import { Mail, ArrowUp } from 'lucide-react';
 import { TwitterIcon, GithubIcon } from './TechIcons';
+import { AiBrand } from './AiLogo';
 import './DevvyhacFooter.css';
 
 export default function DevvyhacFooter({ onNavigate }) {
@@ -12,7 +13,9 @@ export default function DevvyhacFooter({ onNavigate }) {
     <footer className="ds-footer">
       <div className="ds-container ds-footer-container">
         <div className="ds-footer-left">
-          <span className="footer-brand">Abdulqudus Ismail</span>
+          <div className="footer-brand-wrap" onClick={scrollToTop} style={{ cursor: 'pointer' }}>
+            <AiBrand iconSize={28} />
+          </div>
           <p className="footer-copyright">
             © {new Date().getFullYear()} Abdulqudus Ismail (Devvyhac). Built with Go &amp; .NET engineering precision.
           </p>
