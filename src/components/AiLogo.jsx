@@ -8,7 +8,7 @@ export function AiLogoIcon({ size = 32, className = '' }) {
     <svg
       width={size}
       height={size}
-      viewBox="0 0 120 115"
+      viewBox="0 0 110 100"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={`ai-logo-icon ${className}`}
@@ -22,93 +22,90 @@ export function AiLogoIcon({ size = 32, className = '' }) {
         </linearGradient>
       </defs>
 
-      {/* --- 1. APEX FACETED SHADING (Top of 'A') --- */}
-      <polygon points="56,16 68,16 52,38" fill="#55e6a5" opacity="0.4" />
-      <polygon points="44,28 56,16 52,38" fill="#55e6a5" opacity="0.85" />
+      {/* =====================================================================
+          1. LETTER 'A' (Left Glyphs & Traces)
+          ===================================================================== */}
+      {/* Top Apex Facet Shading */}
+      <polygon points="39,15 49,15 45,28 35,26" fill="#55e6a5" opacity="0.5" />
+      <polygon points="35,26 45,28 41,36 30,34" fill="#3edb96" opacity="0.35" />
 
-      {/* --- 2. MAIN 'A' CONTOUR & FRAME --- */}
-      {/* Outer Left Leg & Apex */}
+      {/* Main 'A' Outer Frame */}
       <path
-        d="M 12 94 L 56 16 L 68 16 L 76 28 L 62 48 L 50 28 L 26 94 L 12 94 Z"
+        d="M 8 92 L 39 15 L 49 15 L 70 92 L 56 92 L 50 71 L 24 71 L 18 92 Z"
         fill="#55e6a5"
       />
 
-      {/* Crossbar of 'A' */}
-      <path
-        d="M 32 70 L 64 70 L 64 64 L 35 64 Z"
-        fill="#55e6a5"
-      />
+      {/* Inner Triangle Negative Space Cutout */}
+      <polygon points="37,30 28,62 48,62" fill="#121316" />
 
-      {/* --- 3. CIRCUIT TRACES & NODES ON 'A' --- */}
-      {/* Upper Circuit Trace (from inner left slope down-right) */}
+      {/* Crossbar Definition Line */}
+      <line x1="26" y1="62" x2="49" y2="62" stroke="#55e6a5" strokeWidth="2" />
+
+      {/* Upper Circuit Trace & Node (Inner A) */}
       <line
-        x1="40"
-        y1="46"
-        x2="74"
-        y2="54"
+        x1="32"
+        y1="44"
+        x2="52"
+        y2="49"
         stroke="#55e6a5"
-        strokeWidth="4.5"
+        strokeWidth="3.8"
         strokeLinecap="round"
       />
-      {/* Upper Node Dot */}
-      <circle cx="74" cy="54" r="5.2" fill="#55e6a5" />
+      <circle cx="52" cy="49" r="4.2" fill="#55e6a5" />
 
-      {/* Lower Circuit Trace (from crossbar rightwards) */}
+      {/* Lower Circuit Trace & Node (Crossbar) */}
       <line
-        x1="52"
-        y1="67"
-        x2="68"
-        y2="67"
+        x1="38"
+        y1="64"
+        x2="52"
+        y2="64"
         stroke="#55e6a5"
-        strokeWidth="4.5"
+        strokeWidth="3.8"
         strokeLinecap="round"
       />
-      {/* Lower Node Dot */}
-      <circle cx="68" cy="67" r="5.2" fill="#55e6a5" />
+      <circle cx="52" cy="64" r="4.2" fill="#55e6a5" />
 
-      {/* --- 4. LOWER RIGHT LEG OF 'A' & JUNCTION --- */}
-      <path
-        d="M 48 70 L 62 94 L 72 94 L 56 68 Z"
-        fill="#55e6a5"
-      />
-
-      {/* --- 5. LETTER 'i' --- */}
+      {/* =====================================================================
+          2. LETTER 'i' (Right Glyphs & Traces - Distinct Separation)
+          ===================================================================== */}
       {/* 'i' Top Block/Dot (Angled Beveled Polygon) */}
       <polygon
-        points="88,18 104,18 104,36 88,26"
+        points="80,15 96,15 96,29 80,23"
         fill="#55e6a5"
       />
       <polygon
-        points="88,18 98,18 88,26"
+        points="80,15 88,15 80,23"
         fill="#3edb96"
-        opacity="0.65"
+        opacity="0.6"
       />
 
-      {/* 'i' Vertical Circuit Stem with Top Node */}
+      {/* 'i' Vertical Circuit Trace with Top Node */}
       <line
-        x1="90"
-        y1="72"
-        x2="90"
+        x1="85"
+        y1="68"
+        x2="85"
         y2="44"
+        stroke="#55e6a5"
+        strokeWidth="4.5"
+        strokeLinecap="round"
+      />
+      <circle cx="85" cy="44" r="4.5" fill="#55e6a5" />
+
+      {/* 'i' Right Vertical Border Line */}
+      <line
+        x1="96"
+        y1="37"
+        x2="96"
+        y2="92"
         stroke="#55e6a5"
         strokeWidth="5"
         strokeLinecap="round"
       />
-      {/* 'i' Top Node Dot */}
-      <circle cx="90" cy="44" r="5.2" fill="#55e6a5" />
 
-      {/* 'i' Right Vertical Border Line */}
-      <path
-        d="M 99 40 L 104 40 L 104 94 L 99 94 Z"
-        fill="#55e6a5"
-      />
-
-      {/* --- 6. FACETED MESH (Bottom Base between 'A' and 'i') --- */}
-      <polygon points="62,94 76,74 84,94" fill="#55e6a5" opacity="0.45" />
-      <polygon points="76,74 90,72 88,94" fill="#55e6a5" opacity="0.8" />
-      <polygon points="88,94 90,72 104,82 104,94" fill="#55e6a5" opacity="0.9" />
-      <polygon points="76,74 90,72 104,82" fill="#3edb96" opacity="0.55" />
-      <polygon points="62,94 72,94 76,74" fill="#55e6a5" opacity="0.7" />
+      {/* 'i' Base Faceted Mesh */}
+      <polygon points="80,92 85,68 96,78" fill="#55e6a5" opacity="0.45" />
+      <polygon points="80,92 96,78 96,92" fill="#55e6a5" opacity="0.85" />
+      <polygon points="80,92 85,68 85,92" fill="#3edb96" opacity="0.35" />
     </svg>
   );
 }
