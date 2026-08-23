@@ -24,9 +24,9 @@ export default function DevvyhacCvSection({ onOpenCvModal }) {
           <div className="ds-cv-actions">
             <button
               type="button"
-              onClick={handlePrint}
-              className="ds-cv-btn ds-cv-btn-primary"
-              title="Print / Save CV as PDF"
+              disabled
+              className="ds-cv-btn ds-cv-btn-primary ds-cv-btn-disabled"
+              title="Print / PDF (Disabled)"
             >
               <Printer size={16} />
               <span>Print / PDF</span>

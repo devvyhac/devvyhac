@@ -67,10 +67,18 @@
   color: var(--text-dark);
 }
 
-.ds-cv-btn-primary:hover {
+.ds-cv-btn-primary:hover:not(:disabled) {
   background: var(--accent-mint-hover);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(85, 230, 165, 0.3);
+}
+
+.ds-cv-btn:disabled,
+.ds-cv-btn.ds-cv-btn-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
 }
 
 .ds-cv-btn-secondary {
