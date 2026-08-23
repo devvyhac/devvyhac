@@ -17,7 +17,7 @@ export default function DevvyhacFooter({ onNavigate }) {
             <AiBrand iconSize={28} />
           </div>
           <p className="footer-copyright">
-            © {new Date().getFullYear()} Abdulqudus Ismail (Devvyhac). Built with Go &amp; .NET engineering precision.
+            © {new Date().getFullYear()} Abdulqudus Ismail (Devvyhac). Built with React.js &amp; Vite.
           </p>
         </div>
 
