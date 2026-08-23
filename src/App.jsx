@@ -20,10 +20,18 @@ export default function App() {
   const isNavigatingRef = useRef(false);
   const navigateTimeoutRef = useRef(null);
 
-  // Smooth scroll handler that immediately locks & syncs active state
-  const handleNavigate = (sectionId) => {
+  // Smooth scroll handler that updates URL hash and immediately locks & syncs active state
+  const handleNavigate = (sectionId, updateHistory = true) => {
     const targetSection = sectionId === 'hero' ? 'services' : sectionId;
     setActiveSection(targetSection);
+
+    // Reflect section in the browser search/address bar
+    if (updateHistory) {
+      const newHash = sectionId === 'hero' ? '#hero' : `#${sectionId}`;
+      if (window.location.hash !== newHash) {
+        window.history.pushState(null, '', newHash);
+      }
+    }
 
     // Lock ScrollSpy while smooth scrolling so intermediate sections don't override
     isNavigatingRef.current = true;
@@ -38,6 +46,32 @@ export default function App() {
     }
   };
 
+  // Sync initial URL hash on page load and support browser Back/Forward navigation
+  useEffect(() => {
+    const initialHash = window.location.hash.replace('#', '');
+    if (initialHash) {
+      setTimeout(() => {
+        const el = document.getElementById(initialHash);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+          setActiveSection(initialHash === 'hero' ? 'services' : initialHash);
+        }
+      }, 150);
+    }
+
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace('#', '') || 'hero';
+      handleNavigate(hash, false);
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+    window.addEventListener('popstate', handleHashChange);
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+      window.removeEventListener('popstate', handleHashChange);
+    };
+  }, []);
+
   // Keyboard shortcut Ctrl+K / Cmd+K for search
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -50,7 +84,7 @@ export default function App() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  // Precise Bounding-Box ScrollSpy tracking visible section in real-time
+  // Precise Bounding-Box ScrollSpy tracking visible section in real-time and syncing address bar
   useEffect(() => {
     const sectionIds = [
       'hero',
@@ -78,6 +112,9 @@ export default function App() {
 
           if (isNearBottom) {
             setActiveSection('contacts');
+            if (window.location.hash !== '#contacts') {
+              window.history.replaceState(null, '', '#contacts');
+            }
             ticking = false;
             return;
           }
@@ -88,10 +125,10 @@ export default function App() {
               const rect = el.getBoundingClientRect();
               // A section is active if the focus line (38% from top) is between its top and bottom bounds
               if (rect.top <= focusPoint && rect.bottom > focusPoint) {
-                if (id === 'hero') {
-                  setActiveSection('services');
-                } else {
-                  setActiveSection(id);
+                const target = id === 'hero' ? 'services' : id;
+                setActiveSection(target);
+                if (window.location.hash !== `#${id}`) {
+                  window.history.replaceState(null, '', `#${id}`);
                 }
                 break;
               }
